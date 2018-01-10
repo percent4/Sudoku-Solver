@@ -1,0 +1,120 @@
+<html>
+	
+<head>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'App/mystyle.css' %}" />
+</head>
+
+<body background="{% static 'App/mountain.jpg' %}">
+	<center><h1>Solve A Sudoku</h1></center>
+	<form action="/answer/" method="get">
+	<table class="sd" border="0" align="center" cellspacing="1" cellpadding="1">
+		<tr>
+			<td class="xx"><input id="1" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="2" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="3" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="4" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="5" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="6" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="7" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="8" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="9" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="xx"><input id="10" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="11" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="12" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="13" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="14" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="15" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="16" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="17" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="18" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="xx"><input id="19" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="20" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="21" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="22" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="23" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="24" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="25" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="26" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="27" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="top"><input id="28" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="29" class="big" name="grid" maxlength="1"></td>
+			<td class="topr"><input id="30" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="31" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="32" class="big" name="grid" maxlength="1"></td>
+			<td class="topr"><input id="33" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="34" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="35" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="36" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="xx"><input id="37" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="38" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="39" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="40" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="41" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="42" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="43" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="44" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="45" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="xx"><input id="46" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="47" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="48" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="49" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="50" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="51" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="52" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="53" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="54" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="top"><input id="55" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="56" class="big" name="grid" maxlength="1"></td>
+			<td class="topr"><input id="57" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="58" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="59" class="big" name="grid" maxlength="1"></td>
+			<td class="topr"><input id="60" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="61" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="52" class="big" name="grid" maxlength="1"></td>
+			<td class="top"><input id="63" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="xx"><input id="64" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="65" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="66" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="67" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="68" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="69" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="70" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="71" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="72" class="big" name="grid" maxlength="1"></td>
+		</tr>
+		<tr>
+			<td class="xx"><input id="73" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="74" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="75" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="76" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="77" class="big" name="grid" maxlength="1"></td>
+			<td class="rr"><input id="78" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="79" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="80" class="big" name="grid" maxlength="1"></td>
+			<td class="xx"><input id="81" class="big" name="grid" maxlength="1"></td>
+		</tr>
+	</table>
+	<br>
+	<center>
+	<button type="reset" value="Reset">Reset</button>
+	<input type="submit" value="Show Anwser"> 
+	</center>
+    </form>
+</body>
+
+</html>

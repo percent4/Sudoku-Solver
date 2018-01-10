@@ -1,0 +1,67 @@
+<html>
+
+<head>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'App/mystyle.css' %}" />
+</head>
+
+<body background="{% static 'App/sky.jpg' %}">
+	<center><h1>{{info}}</h1>
+	{% ifequal info 'The solution is found:'%}
+	<script>
+		var mat = {{grid|safe}};
+		var mat_orig = {{grid_orig|safe}};
+		var i,j;
+		document.write('<table class="sd" border="0" align="center" cellspacing="1" cellpadding="1">');
+		for(i=0;i<9;i++){
+			document.write('<tr>');
+			if (i != 3 && i != 6){
+				for(j=0;j<9;j++){
+					if(j ==2 || j ==5){
+						if(mat[i][j] == mat_orig[i][j]){
+							document.write('<td class="rr"><font color="blue" size="5">'+mat[i][j]+'</font</td>');
+						}
+						else{
+							document.write('<td class="rr">'+mat[i][j]+'</td>');
+						}
+					}
+					else{
+						if(mat[i][j] == mat_orig[i][j]){
+							document.write('<td class="xx"><font color="blue" size="5">'+mat[i][j]+'</font</td>');
+						}
+						else{
+							document.write('<td class="xx">'+mat[i][j]+'</td>');
+						}
+					}
+				}
+			}
+			else{
+				for(j=0;j<9;j++){
+					if(j ==2 || j ==5){
+						if(mat[i][j] == mat_orig[i][j]){
+							document.write('<td class="topr"><font color="blue" size="5">'+mat[i][j]+'</font</td>');
+						}
+						else{
+							document.write('<td class="topr">'+mat[i][j]+'</td>');
+						}
+					}
+					else{
+						if(mat[i][j] == mat_orig[i][j]){
+							document.write('<td class="top"><font color="blue" size="5">'+mat[i][j]+'</font</td>');
+						}
+						else{
+							document.write('<td class="top">'+mat[i][j]+'</td>');
+						}
+					}
+				}
+			}
+			document.write('</tr>');
+		}
+	</script>
+	{% endifequal %}
+	<button onclick="window.location.href='http://localhost:8000/index'">Return</button>
+	<br><br>
+	</center>
+</body>
+</html>
+
