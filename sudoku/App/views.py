@@ -94,9 +94,14 @@ def isValidGrid(grid):
     return True
 
 def answer(request):
+    #Get input from the index.html page
     get_lst = request.REQUEST.getlist("grid")
+	#original grid to store the input numbers, replace empty string with 0
     grid_orig = readAPuzzle(lst = [int(_) if _ else 0 for _ in get_lst])
+	#the grid that store a answer with latter processing
     grid = readAPuzzle(lst = [int(_) if _ else 0 for _ in get_lst])
+	
+	#information to output
     info = ""
     if not isValidGrid(grid):
         info = "Invalid input"
