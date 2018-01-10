@@ -8,4 +8,4 @@ If you want to run this program, make sure that Python3 and Django are installle
   <li>Enter "http://localhost:8000/index" in one of your broswers.</li>
 </ol>
 
-Fially, do not forget to modify the Templates DIRS in your computer, which guarantees that your program runs successfully!
+Finally, do not forget to modify the Templates DIRS in your computer, which guarantees that your program runs successfully!
