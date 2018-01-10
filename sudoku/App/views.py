@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 def index(request):
     return render_to_response('index.html')
 
-#Read a Sudoku puzzle from the keyboard
+#Read a Sudoku puzzle from index.html page
 def readAPuzzle(lst):
     grid=[]
     for i in range(9):
